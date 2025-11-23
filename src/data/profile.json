@@ -1,0 +1,106 @@
+{
+  "name": "Adarsh Kushwaha",
+  "title": "",
+  "email": "kushwahashubhansh173@gmail.com",
+  "profileImage": "/assets/profile.png",
+  "cv": "/assets/cv.pdf",
+  "social": {
+    "github": "https://github.com/adarshiitp",
+    "linkedin": "https://www.linkedin.com/in/adarsh-kushwaha-iitp",
+    "instagram": "https://www.instagram.com/adarsh.allahabad"
+  },
+
+  "hero": {
+    "heading": "Hi — I'm Adarsh",
+    "sub": "Focused on Data Analytics, Machine Learning & real-world data applications — learning, building, and innovating every day.",
+    "typewriter": ["Data Analyst", "Python | SQL | Power BI", "Arcade Champion (75pts) 🏆"]
+  },
+
+  "about": {
+    "title": "About Me",
+    "desc": "I'm a passionate Data Analytics student at IIT Patna, specializing in Python, SQL, and business intelligence tools like Power BI and Tableau. I enjoy transforming raw data into meaningful insights, building dashboards, and solving analytical problems. I believe in learning by doing and constantly improving through real-world projects.",
+    "highlights": [
+      "BS (Hons.) in Computer Science & Data Analytics — IIT Patna",
+      "Hands-on experience in Python, SQL & Power BI",
+      "Good understanding of dashboard design & data visualization",
+      "Focused on building analytics-driven solutions"
+    ]
+  },
+
+  "skills": ["Python","Data Analysis", "ML", "SQL", "Power BI", "Statistics", "Full Stack Dev", "Git"],
+
+  "projects": [
+    {
+      "id": "p1",
+      "title": "AI Chatbot — GPT Based",
+      "desc": "Flask backend + Gemini API chatbot with caching & rate-limiting.",
+      "details": "This project is an AI-powered chatbot created using Flask as the backend and Google Gemini API for responses. Includes caching, rate limiting, and deployment-ready scripts.",
+      "tags": ["Python","Flask","API","AI"],
+      "image": "/assets/ai-chatbot.jpg",
+      "repo": "https://github.com/YOUR_GITHUB/ai-chatbot",
+      "demo": ""
+    },
+    {
+      "id": "p2",
+      "title": "My Personal Protfolio",
+      "desc": "A collection of real-world projects demonstrating my skills and problem-solving.",
+      "details": "This portfolio is built using a modern and scalable tech stack, integrating the latest tools and frameworks to deliver high performance, smooth UI, and responsive user experience. It demonstrates my adaptability to new technologies and my ability to design, develop, and deploy end-to-end applications.",
+      "tags": ["Realtime","Frontend"],
+      "image": "/assets/my-protfolio.png",
+      "repo": "",
+      "demo": ""
+    },
+    {
+      "id": "p3",
+      "title": "Capstone — Chat Generation Bot",
+      "desc": "Realtime chat system with WebSocket communication.",
+      "details": "A collaborative realtime communication platform featuring WebSockets, message persistence and user presence.",
+      "tags": ["Realtime","Frontend","Backend"],
+      "image": "/assets/medicine-donor.png",
+      "repo": "https://github.com/YOUR_GITHUB/ai-chatbot",
+      "demo": ""
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Tata Consultancy Services",
+      "role": "GenAI Data Analytics Simulation",
+      "period": "July 2025",
+      "desc": "Completed a real-world data analytics simulation powered by Generative AI workflows."
+    },
+    {
+      "company": "Google Cloud Arcade Facilitator Program · Trainee",
+      "role": "Google Arcade Champion (75pts) 🏆",
+      "period": "Aug 2025 - Sept 2025 (2mos)",
+      "desc": "This journey provided me with real-world cloud experience and enhanced my problem-solving and consistency through numerous hands-on labs."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Google Cloud Data Analytics Certificate",
+      "period": "Sep 2025",
+      "desc": "Gained hands-on expertise in BigQuery, BI, Cloud, Data Analytics, Visualization, and Project Management."
+    },
+    {
+      "title": "Hack4Brahmaputra 2025 — 24-Hour Hackathon ",
+      "period": "Oct 2025",
+      "desc": "Successfully completed a 24-hour Hackathon at Gauhati University, collaborating with my team to turn ideas into a working prototype while learning, problem-solving, and innovating under pressure."
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "IIT Patna",
+      "period": "2023 - Present",
+      "desc": "BS (Hons.) Computer Science & Data Analytics."
+    },
+    {
+      "institution": "S.B.M Inter College Naini Prayagraj",
+      "period": "Apr 2022 - Mar 2024",
+      "desc": "Senior Secondary (10+2) UP Board"
+    }
+  ],
+
+  "formspreeEndpoint": "https://formspree.io/f/mnnryrbo"
+}
