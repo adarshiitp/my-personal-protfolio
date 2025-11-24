@@ -32,12 +32,12 @@
   "projects": [
     {
       "id": "p1",
-      "title": "AI Chatbot — GPT Based",
+      "title": "AI Chatter — GPT Based",
       "desc": "Flask backend + Gemini API chatbot with caching & rate-limiting.",
       "details": "This project is an AI-powered chatbot created using Flask as the backend and Google Gemini API for responses. Includes caching, rate limiting, and deployment-ready scripts.",
       "tags": ["Python","Flask","API","AI"],
       "image": "/assets/ai-chatbot.jpg",
-      "repo": "https://github.com/YOUR_GITHUB/ai-chatbot",
+      "repo": "https://github.com/adarshiitp/AI-CHATTER",
       "demo": ""
     },
     {
@@ -47,17 +47,17 @@
       "details": "This portfolio is built using a modern and scalable tech stack, integrating the latest tools and frameworks to deliver high performance, smooth UI, and responsive user experience. It demonstrates my adaptability to new technologies and my ability to design, develop, and deploy end-to-end applications.",
       "tags": ["Realtime","Frontend"],
       "image": "/assets/my-protfolio.png",
-      "repo": "",
-      "demo": ""
+      "repo": "https://github.com/adarshiitp/my-personal-protfolio",
+      "demo": "https://adarsh-kushwaha.netlify.app"
     },
     {
       "id": "p3",
-      "title": "Capstone — Chat Generation Bot",
-      "desc": "Realtime chat system with WebSocket communication.",
-      "details": "A collaborative realtime communication platform featuring WebSockets, message persistence and user presence.",
+      "title": "Medicine Donor",
+      "desc": "Community-driven platform for donating and requesting unused medicines.",
+      "details": "A medicine donation and management system that connects donors, NGOs and patients in need. It lets users list surplus medicines with expiry validation, track requests in realtime, and manage safe, verified handovers to reduce wastage and improve access to essential medicines.",
       "tags": ["Realtime","Frontend","Backend"],
       "image": "/assets/medicine-donor.png",
-      "repo": "https://github.com/YOUR_GITHUB/ai-chatbot",
+      "repo": "https://github.com/adarshiitp/Medicine--Donor",
       "demo": ""
     }
   ],
