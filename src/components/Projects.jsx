@@ -11,7 +11,7 @@ export default function Projects({ projects = profile.projects }) {
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="section-title">Projects</h2>
         <p className="muted mb-8 max-w-2xl">
-          A snapshot of some things I’ve built — APIs, chatbots and realtime experiences.
+          A collection of the products I’ve engineered — built with performance, clarity and purpose.
           Click a card to see details.
         </p>
 
