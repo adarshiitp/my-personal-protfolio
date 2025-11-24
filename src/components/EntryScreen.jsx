@@ -2,35 +2,24 @@ import React, { useEffect, useState } from "react";
 
 export default function EntryScreen({ onFinish }) {
   const [startAnim, setStartAnim] = useState(false);
-  const [showWelcome, setShowWelcome] = useState(false);
+  const [typedText, setTypedText] = useState("");
+
+  const fullText = "Hello World!";
 
   useEffect(() => {
     setStartAnim(true);
 
-    const audio = new Audio("/welcome.mp3");
-    audio.volume = 0; 
-    audio.playbackRate = 2;
+    let i = 0;
+    const typer = setInterval(() => {
+      setTypedText(fullText.slice(0, i + 1));
+      i++;
+      if (i === fullText.length) {
+        clearInterval(typer);
+        setTimeout(() => onFinish(), 800);
+      }
+    }, 110);
 
-
-    audio.play().catch(() => {});
-
-
-    setTimeout(() => {
-      let v = 0;
-      const interval = setInterval(() => {
-        if (v < 0.55) {
-          v += 0.05;
-          audio.volume = v;
-        } else {
-          clearInterval(interval);
-        }
-      }, 120);
-    }, 300);
-
-    setTimeout(() => setShowWelcome(true), 2700);
-    const end = setTimeout(() => onFinish(), 3500);
-
-    return () => clearTimeout(end);
+    return () => clearInterval(typer);
   }, []);
 
   return (
@@ -53,11 +42,40 @@ export default function EntryScreen({ onFinish }) {
         ))}
       </svg>
 
-      {showWelcome && (
-        <div className="absolute text-[1.55rem] tracking-[0.32em] font-semibold text-white animate-welcome">
-          Hello World!
-        </div>
-      )}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 26 }).map((_, i) => (
+          <div
+            key={i}
+            className="line-float"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${4 + Math.random() * 3}s`,
+              "--rot": `${Math.random() * 160 - 80}deg`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none">
+        {Array.from({ length: 22 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-px h-[110px] bg-white/10 animate-line"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${4 + Math.random() * 3}s`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="absolute text-[1.55rem] tracking-[0.32em] font-semibold text-white">
+        {typedText}
+        <span className="opacity-60 animate-pulse">▮</span>
+      </div>
     </div>
   );
 }
