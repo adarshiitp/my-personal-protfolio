@@ -8,13 +8,13 @@ export default function EntryScreen({ onFinish }) {
     setStartAnim(true);
 
     const audio = new Audio("/welcome.mp3");
-    audio.volume = 0; // autoplay allowed
-    audio.playbackRate = 1.35;
+    audio.volume = 0; 
+    audio.playbackRate = 2;
 
-    // autoplay (won't get blocked because volume = 0 first)
+
     audio.play().catch(() => {});
 
-    // Fade-in volume (speed तुम्हारी setting के अनुसार)
+
     setTimeout(() => {
       let v = 0;
       const interval = setInterval(() => {
@@ -27,8 +27,8 @@ export default function EntryScreen({ onFinish }) {
       }, 120);
     }, 300);
 
-    setTimeout(() => setShowWelcome(true), 4000);
-    const end = setTimeout(() => onFinish(), 5000);
+    setTimeout(() => setShowWelcome(true), 2700);
+    const end = setTimeout(() => onFinish(), 3500);
 
     return () => clearTimeout(end);
   }, []);
@@ -47,7 +47,7 @@ export default function EntryScreen({ onFinish }) {
             className={`entry-circle ${startAnim ? "animate" : ""}`}
             style={{
               animationDelay: `${i * 0.45}s`,
-              animationDuration: "4.8s",
+              animationDuration: "3.6s",
             }}
           />
         ))}
