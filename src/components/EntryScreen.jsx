@@ -8,16 +8,28 @@ export default function EntryScreen({ onFinish }) {
     setStartAnim(true);
 
     const audio = new Audio("/welcome.mp3");
-    audio.volume = 1;
-    audio.playbackRate = 1.4;
+    audio.volume = 0; // autoplay allowed
+    audio.playbackRate = 1.35;
+
+    // autoplay (won't get blocked because volume = 0 first)
     audio.play().catch(() => {});
+
+    // Fade-in volume (speed तुम्हारी setting के अनुसार)
     setTimeout(() => {
-      audio.volume = 0.55;
-    }, 180);
+      let v = 0;
+      const interval = setInterval(() => {
+        if (v < 0.55) {
+          v += 0.05;
+          audio.volume = v;
+        } else {
+          clearInterval(interval);
+        }
+      }, 120);
+    }, 300);
 
     setTimeout(() => setShowWelcome(true), 4000);
-
     const end = setTimeout(() => onFinish(), 5000);
+
     return () => clearTimeout(end);
   }, []);
 
@@ -43,7 +55,7 @@ export default function EntryScreen({ onFinish }) {
 
       {showWelcome && (
         <div className="absolute text-[1.55rem] tracking-[0.32em] font-semibold text-white animate-welcome">
-          WELCOME
+          Hello World!
         </div>
       )}
     </div>
