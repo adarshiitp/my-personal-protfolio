@@ -278,3 +278,47 @@ body {
   bottom: 13rem; /* pehle 5rem tha */
   z-index: 40;
 }
+
+
+@keyframes floatLine {
+  0% { transform: translateY(0); opacity: 0.1; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-180px); opacity: 0; }
+}
+
+.animate-line {
+  animation: floatLine linear infinite;
+}
+
+/* typewriter cursor */
+.animate-pulse {
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+.line-float {
+  position: absolute;
+  width: 1.2px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.18);
+  filter: blur(0.3px);
+  animation: lineMove linear infinite;
+}
+
+@keyframes lineMove {
+  0% {
+    transform: translateY(90px) rotate(var(--rot));
+    opacity: 0.05;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-140px) rotate(var(--rot));
+    opacity: 0;
+  }
+}
